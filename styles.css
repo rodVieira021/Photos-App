@@ -74,7 +74,6 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  /* margin: 4px; */
 }
 
 .toflex {
@@ -98,6 +97,7 @@ body {
   border: 1px solid rgba(128, 128, 128, 0.323);
   border-radius: 8px 8px 0 0;
   padding: 15px 0;
+  margin-bottom: 20px;
 }
 
 .h2-txt {
@@ -134,9 +134,7 @@ body {
   padding: 2px;
 }
 
-/* max-width:  1024, 992, 768, 576 */
-
-/* max-width: 800px */
+/* MEDIAS */
 
 @media (max-width: 768px) {
   #photos {
@@ -157,8 +155,3 @@ body {
     width: 250px;
   }
 }
-
-/* rem, em, px, % 
-
-box-sizing
-*/

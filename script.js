@@ -1,11 +1,3 @@
-//access-  Az5mxRKorPPhF83198cBkP2XxlF49fMzYD-Bc98YNfc
-
-//secret- fZE2Dp2NfKqsj0DXls-vB87iv4nURR9tvlTGjigY96I
-
-//https://api.unsplash.com/photos?client_id=Az5mxRKorPPhF83198cBkP2XxlF49fMzYD-Bc98YNfc
-
-//https://api.unsplash.com/search/photos?query=car&per_page=20&client_id=Az5mxRKorPPhF83198cBkP2XxlF49fMzYD-Bc98YNfc
-
 const apiCall2 = async (call) => {
   const request2 = await fetch(
     `https://api.unsplash.com/search/photos?query=${call}&per_page=20&client_id=Az5mxRKorPPhF83198cBkP2XxlF49fMzYD-Bc98YNfc`
@@ -72,10 +64,5 @@ document.getElementById("btn-search").addEventListener("click", function () {
   let input = document.getElementById("search").value;
   apiCall2(input);
 });
-apiCall1();
 
-// https://www.w3schools.com/js/js_array_iteration.asp
-// https://www.w3schools.com/js/js_classes.asp
-// https://www.w3schools.com/js/js_mistakes.asp
-// https://web.dev/learn/design/media-queries/
-// https://codepen.io/jcplus/pen/oebJRO    grid waterfall
+apiCall1();
