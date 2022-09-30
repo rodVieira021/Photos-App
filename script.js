@@ -19,10 +19,14 @@ const apiCall2 = async (call) => {
     <div class='aut-info'>
     <img class="autor-photo"src="${resp.user.profile_image.small}"/>
     <p><a class="aut-name"href= "${resp.user.social_instagram_username}" target="blank">${resp.user.first_name}</a></p>
-    <a href="#">Dowload</a>
+    <a href="#" download="${resp.links.download}">Download</a>
+    </div>
     </div>
     <img class="main-img"src='${resp.urls.regular}'/>
+    <div class="button-text">
     <p class="p-txt-like">${resp.likes} Likes</p>
+    <a href="#" download="${resp.links.download}"><img class="down-btn"src="imgs/download_btn.png"/></i></a>
+    </div>
      </div>
              `;
   });
@@ -46,10 +50,14 @@ const apiCall1 = async () => {
           resp.user.portfolio_url ?? resp.user.links.portfolio
         }" target="blank">${resp.user.first_name}</a></p>
         
-        <a href="#" download="${resp.links.download}">Download</a>
         </div>
         <img class="main-img"src='${resp.urls.regular}'/>
+        <div class="button-text">
         <p class="p-txt-like">${resp.likes} Likes</p>
+        <a href="#" download="${
+          resp.links.download
+        }"><img class="down-btn"src="imgs/download_btn.png"/></i></a>
+        </div>
          </div>
          `;
   });
