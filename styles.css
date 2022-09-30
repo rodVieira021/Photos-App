@@ -10,6 +10,7 @@
 .main {
   display: grid;
   justify-items: center;
+  align-items: center;
   background-color: #efefef;
   min-width: 410px;
 }
@@ -84,6 +85,7 @@
   margin-top: 50px;
   padding: 20px;
   margin-top: 50px;
+  align-items: center;
 }
 
 .container-photo {
