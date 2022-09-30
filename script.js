@@ -18,13 +18,11 @@ const apiCall2 = async (call) => {
     <div class='container-photo'>
     <div class='aut-info'>
     <img class="autor-photo"src="${resp.user.profile_image.small}"/>
-    <p><a class="aut-name"href= "${
-      resp.user.social_instagram_username
-    }" target="blank">${resp.user.first_name}</a></p></div>
-    <img class="main-img"src='${resp.urls.regular}' width = 300px/>
+    <p><a class="aut-name"href= "${resp.user.social_instagram_username}" target="blank">${resp.user.first_name}</a></p>
+    <a href="#">Dowload</a>
+    </div>
+    <img class="main-img"src='${resp.urls.regular}'/>
     <p class="p-txt-like">${resp.likes} Likes</p>
-    <h2 class="h2-txt">${resp.description ? resp.description : "Not found"}</h2>
-    <p class="p-txt">${resp.created_at}</p>
      </div>
              `;
   });
@@ -39,20 +37,19 @@ const apiCall1 = async () => {
   let output1 = "";
   //  console.log(response1);
   response1.forEach((resp) => {
-    console.log(resp.user);
+    console.log(resp);
     output1 += `
         <div class='container-photo'>
         <div class='aut-info'>
         <img class="autor-photo"src="${resp.user.profile_image.small}"/>
         <p><a class="aut-name" href= "${
           resp.user.portfolio_url ?? resp.user.links.portfolio
-        }" target="blank">${resp.user.first_name}</a></p></div>
-        <img class="main-img"src='${resp.urls.regular}' width = 300px/>
+        }" target="blank">${resp.user.first_name}</a></p>
+        
+        <a href="#" download="${resp.links.download}">Download</a>
+        </div>
+        <img class="main-img"src='${resp.urls.regular}'/>
         <p class="p-txt-like">${resp.likes} Likes</p>
-        <h2 class="h2-txt">${
-          resp.description ? resp.description : "Not found"
-        }</h2>
-        <p class="p-txt">${resp.created_at}</p>
          </div>
          `;
   });
