@@ -3,6 +3,7 @@ const apiCall2 = async (call) => {
     `https://api.unsplash.com/search/photos?query=${call}&per_page=20&client_id=Az5mxRKorPPhF83198cBkP2XxlF49fMzYD-Bc98YNfc`
   );
   const response2 = await request2.json();
+  console.log(response2);
   let output2 = "";
   response2.results.forEach((resp) => {
     output2 += `
@@ -14,12 +15,16 @@ const apiCall2 = async (call) => {
         }" target="blank">${resp.user.first_name}</a></p>
         
         </div>
-        <img class="main-img"src='${resp.urls.regular}'/>
+        <a href="${resp.urls.regular}" target="_blank">
+        <img class="main-img" src='${resp.urls.regular}'/>
+        </a>
         <div class="button-text">
         <p class="p-txt-like">${resp.likes} Likes</p>
-        <a href="#" download="${resp.links.download_location}">
+
+        <a href="" download="${resp.links.download_location}">
         <img class="down-btn"src="imgs/download_btn.png"/>
         </a>
+
         </div>
          </div>
              `;
@@ -44,10 +49,14 @@ const apiCall1 = async () => {
         }" target="blank">${resp.user.first_name}</a></p>
         
         </div>
+        <a href="${resp.urls.regular}" target="_blank">
         <img class="main-img"src='${resp.urls.regular}'/>
+        </a>
         <div class="button-text">
         <p class="p-txt-like">${resp.likes} Likes</p>
-        <a href="#" download="${resp.links.download_location}">
+        <a href="" download="${
+      resp.links.download_location
+    }">
         <img class="down-btn"src="imgs/download_btn.png"/>
         </a>
         </div>
