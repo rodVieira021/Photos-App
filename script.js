@@ -20,11 +20,6 @@ const apiCall2 = async (call) => {
         </a>
         <div class="button-text">
         <p class="p-txt-like">${resp.likes} Likes</p>
-
-        <a href="" download="${resp.links.download_location}">
-        <img class="down-btn"src="imgs/download_btn.png"/>
-        </a>
-
         </div>
          </div>
              `;
@@ -37,7 +32,6 @@ const apiCall1 = async () => {
     "https://api.unsplash.com/photos?client_id=Az5mxRKorPPhF83198cBkP2XxlF49fMzYD-Bc98YNfc"
   );
   const response1 = await request1.json();
-  console.log(response1);
   let output1 = "";
   response1.forEach((resp) => {
     output1 += `
@@ -54,15 +48,11 @@ const apiCall1 = async () => {
         </a>
         <div class="button-text">
         <p class="p-txt-like">${resp.likes} Likes</p>
-        <a href="" download="${
-      resp.links.download_location
-    }">
-        <img class="down-btn"src="imgs/download_btn.png"/>
-        </a>
         </div>
          </div>
          `;
   });
+
   document.getElementById("photos").innerHTML = output1;
   //     `
 };
