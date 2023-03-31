@@ -12,6 +12,7 @@
   justify-items: center;
   align-items: center;
   background-color: #efefef;
+  transition: background 0.3s linear;
 }
 
 #title {
