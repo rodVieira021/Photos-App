@@ -6,9 +6,6 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body {
-  background-color: #efefef;
-}
 
 .main {
   display: grid;
@@ -141,6 +138,68 @@ body {
   border: 1px solid rgb(8, 187, 52);
   border-radius: 50%;
   padding: 2px;
+}
+
+/* DARK MODE TOGGLE */
+
+.main.dark {
+  background-color: #292c35;
+}
+
+.main.dark #title {
+  color: #efefef;
+}
+
+.main.dark .container-photo {
+  background-color: #212121;
+  border: 1px solid #fff;
+}
+
+.main.dark .aut-name {
+  color: #efefef;
+}
+
+.main.dark .p-txt-like {
+  color: #efefef;
+}
+
+.checkbox-div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
 }
 
 /* MEDIAS */
