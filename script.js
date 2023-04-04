@@ -33,7 +33,6 @@ const apiCall2 = async (call) => {
     `https://api.unsplash.com/search/photos?query=${call}&per_page=20&client_id=Az5mxRKorPPhF83198cBkP2XxlF49fMzYD-Bc98YNfc`
   );
   const response2 = await request2.json();
-  console.log(response2);
   let output2 = "";
   response2.results.forEach((resp) => {
     output2 += `
